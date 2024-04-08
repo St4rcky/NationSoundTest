@@ -1,0 +1,21 @@
+.footer {
+  border-top: solid 10px #453a94;
+  color: #453a94;
+}
+.logoReseaux {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 50px;
+}
+.menuFooter {
+  padding: 0 0 10px 10px;
+}
+.menuFooter p {
+  display: inline;
+  margin: 0 10px 10px 12px;
+}
+.lienFooter {
+  text-decoration: none;
+  color: #453a94;
+  font-size: 1em;
+}

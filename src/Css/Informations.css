@@ -1,0 +1,38 @@
+.sectionInfo {
+  display: flex;
+  justify-content: center;
+}
+.sectionInfo p {
+  font-size: 1em;
+  cursor: pointer;
+  padding: 5px;
+}
+.choixInfo {
+  background-color: #f43b47;
+  border-radius: 10px;
+  color: #c1d0f4;
+  margin: 0 4px;
+}
+.infoReste {
+  background-color: #453a94;
+  border-radius: 10px;
+  color: #c1d0f4;
+  margin: 0 4px;
+}
+.blockInfo {
+  padding: 0 10px 15px;
+}
+.infoText {
+  font-size: 1em;
+}
+.imgTitle {
+  display: flex;
+  align-items: center;
+}
+.title2 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  color: #453a94;
+  font-size: 20px;
+}

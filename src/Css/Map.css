@@ -1,0 +1,18 @@
+.iconTitle {
+  margin: 0;
+}
+.filtreMap {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.iconMap {
+  width: 25px;
+  height: auto;
+}
+.boutonMap {
+  font-size: 1.1em;
+  display: flex;
+  border-radius: 10px;
+  padding-bottom: 0px;
+  background-color: brown;
+}

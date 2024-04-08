@@ -1,0 +1,18 @@
+.blockQuestion {
+  background-color: #c1d0f4;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  border-radius: 10px;
+  padding: 5px 2px;
+}
+.ouvrirFermer.plus {
+  display: block;
+}
+.reponse {
+  padding: 5px 10px;
+  font-size: 1em;
+  /* animation: slideDown 0.7s ease-in-out forwards; */
+}
+.plus {
+  color: #453a94;
+}
