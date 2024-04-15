@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Menu() {
   const [navVisible, setNavVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleNav = () => {
     setNavVisible(!navVisible);
@@ -10,35 +23,61 @@ export default function Menu() {
 
   return (
     <>
-      <div className="container">
-        <div>
-          <Link to="/">
-            <img src="/image/logo4.png" alt="logo" className="logo"></img>
-          </Link>
-          <p className="dateLogo rouge">12-14 Juillet 2024</p>
+      <div>
+        <div className="container">
+          <div>
+            <Link to="/">
+              <img src="/image/logo4.png" alt="logo" className="logo"></img>
+            </Link>
+            <p className="dateLogo rouge">12-14 Juillet 2024</p>
+          </div>
+          <nav className={`navBar${navVisible ? " column" : ""}`}>
+            <img src="/image/logo4.png" alt="logo" className="logoOpen"></img>
+            <Link
+              to="/"
+              onClick={windowWidth <= 1200 ? toggleNav : null}
+              className="linkMenu"
+            >
+              Accueil
+            </Link>
+            <Link
+              to="/programmation"
+              onClick={windowWidth <= 1200 ? toggleNav : null}
+              className="linkMenu"
+            >
+              Programmation
+            </Link>
+            <Link
+              to="/billetterie"
+              onClick={windowWidth <= 1200 ? toggleNav : null}
+              className="linkMenu"
+            >
+              Billetterie
+            </Link>
+            <Link
+              to="/informations"
+              onClick={windowWidth <= 1200 ? toggleNav : null}
+              className="linkMenu"
+            >
+              Informations
+            </Link>
+            {/* <Link to="/partenaires">Patenaires</Link> */}
+            <Link
+              to="/faq"
+              onClick={windowWidth <= 1200 ? toggleNav : null}
+              className="linkMenu"
+            >
+              FAQ
+            </Link>
+            <Link
+              to="/carte"
+              onClick={windowWidth <= 1200 ? toggleNav : null}
+              className="linkMenu"
+            >
+              Carte
+            </Link>
+          </nav>
         </div>
-        <nav className={`navBar${navVisible ? " column" : ""}`}>
-          <img src="/image/logo4.png" alt="logo" className="logoOpen"></img>
-          <Link to="/" onClick={toggleNav}>
-            Accueil
-          </Link>
-          <Link to="/programmation" onClick={toggleNav}>
-            Programmation
-          </Link>
-          <Link to="/billetterie" onClick={toggleNav}>
-            Billetterie
-          </Link>
-          <Link to="/informations" onClick={toggleNav}>
-            Informations
-          </Link>
-          {/* <Link to="/partenaires">Patenaires</Link> */}
-          <Link to="/faq" onClick={toggleNav}>
-            FAQ
-          </Link>
-          <Link to="/carte" onClick={toggleNav}>
-            Carte
-          </Link>
-        </nav>
       </div>
       <button className="burger" onClick={toggleNav}>
         {navVisible ? ( // Si le menu est ouvert

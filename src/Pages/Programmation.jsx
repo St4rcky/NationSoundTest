@@ -57,7 +57,6 @@ export default function Programmation() {
             .split("T")[1]
             .substring(0, 5);
           const artistType = artist.attributes.field_scene.toLowerCase();
-          console.log("Type de l'artiste:", artistType);
           return (
             (selectedDate === "Tous" || artistDate === selectedDate) &&
             (selectedHeure === "Toutes" || artistHeure === selectedHeure) &&
@@ -67,7 +66,7 @@ export default function Programmation() {
 
   return (
     <>
-      <div className="bg divProgram">
+      <div className="divProgram">
         <h1 className="title">PROGRAMMATION</h1>
         <div className="choixDate">
           <section>

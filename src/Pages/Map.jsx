@@ -1,9 +1,22 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Map() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [currentEvents, setCurrentEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchCurrentEvents = async () => {
+      const response = await fetch(
+        "http://localhost/drupalNationSound/jsonapi/node/artiste"
+      );
+      const data = await response.json();
+      setCurrentEvents(data.data);
+    };
+
+    fetchCurrentEvents();
+  }, []);
 
   const barIcon = L.icon({
     iconUrl: "/image/barIcon.png",
@@ -141,7 +154,7 @@ export default function Map() {
 
   return (
     <>
-      <div className="bg">
+      <div className="blockMap">
         <p>FILTRE</p>
         <div className="filtreMap">
           <p className="boutonMap" onClick={() => handleCategoryChange(null)}>
@@ -165,6 +178,24 @@ export default function Map() {
             Camping
           </button>
         </div>
+        <button>En cours</button>
+        <select name="heure" id="selectHeure">
+          <option value="" disabled>
+            Heure
+          </option>
+          <option value="16:00">18h</option>
+          <option value="18:00">20h</option>
+          <option value="20:00">22h</option>
+          <option value="22:00">00h</option>
+        </select>
+        <select name="date" id="selectDate">
+          <option value="" disabled>
+            Date
+          </option>
+          <option value="2024-07-12">12</option>
+          <option value="2024-07-13">13</option>
+          <option value="2024-07-14">14</option>
+        </select>
 
         <MapContainer
           center={[48.8283, 2.433]}

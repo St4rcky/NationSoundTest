@@ -67,55 +67,58 @@ export default function Accueil() {
 
   return (
     <>
-      <div className="container2">
-        <div className="dateAccueil">
-          {schedule
-            .map((event) => (
-              <div key={event.date}>
-                <p className="date">{`— le ${event.date} — `}</p>
-                {event.artists.map((artist) => (
-                  <Link key={artist.id} to={`/artiste/${artist.id}`}>
-                    <p className="bleu artiste">{artist.title}</p>
-                  </Link>
-                ))}
-              </div>
-            ))
-            .reverse()}
+      <div className="bgGrand">
+        <div className="container2">
+          <div className="dateAccueil">
+            {schedule
+              .map((event) => (
+                <div key={event.date}>
+                  <p className="date">{`— le ${event.date} — `}</p>
+                  {event.artists.map((artist) => (
+                    <Link key={artist.id} to={`/artiste/${artist.id}`}>
+                      <p className="bleu artiste">{artist.title}</p>
+                    </Link>
+                  ))}
+                </div>
+              ))
+              .reverse()}
+          </div>
         </div>
-      </div>
-      <div className="test bg">
-        <Link
-          to="/programmation"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-          }}
-        >
-          <div className="divImage">
-            <img
-              src="/image/Artistes.jpg"
-              alt="Artistes"
-              className="imageAccueil"
-            />
-            <h2 className="titreImage">Programmation</h2>
-          </div>
-        </Link>
-        <Link
-          to="/billetterie"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-          }}
-        >
-          <div className="divImage">
-            <img
-              src="/image/billetterie.jpg"
-              alt="Billeterie"
-              className="imageAccueil"
-            />
-            <h2 className="titreImage2">Billeterie</h2>
-          </div>
-        </Link>
+
+        <div className="basAccueil">
+          <Link
+            to="/programmation"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            <div className="divImage">
+              <img
+                src="/image/Artistes.jpg"
+                alt="Artistes"
+                className="imageAccueil"
+              />
+              <h2 className="titreImage">Programmation</h2>
+            </div>
+          </Link>
+          <Link
+            to="/billetterie"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            <div className="divImage">
+              <img
+                src="/image/billetterie.jpg"
+                alt="Billeterie"
+                className="imageAccueil"
+              />
+              <h2 className="titreImage2">Billeterie</h2>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

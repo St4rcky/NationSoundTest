@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <div className="footer bg">
+      <div className="footer">
         <div className="logoReseaux">
           <a href="https://twitter.com/" target="_blank">
             <img src="/image/twitter.png" alt="logo Twitter"></img>
@@ -22,7 +22,7 @@ export default function Footer() {
           <a className="lienFooter" href="mailto:pascal.starck@ecoles-epsi.net">
             Contact
           </a>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/faq" style={{ textDecoration: "none" }}>
             <p className="lienFooter">FAQ</p>
           </Link>
           <Link to="/mentions" style={{ textDecoration: "none" }}>

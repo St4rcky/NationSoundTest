@@ -6,7 +6,7 @@ export default function Restauration() {
       <div className="blockInfo">
         <h2 className="title2">MANGER ET BOIRE SUR PLACE</h2>
         <img src="image/repas.jpg" className="imgResto"></img>
-        <p>
+        <p className="infoText">
           Faites le plein d'énergie au son de la musique ! Régalez-vous entre
           deux concerts avec nos stands variés et gourmands. De la cuisine vegan
           aux saveurs du monde, il y en a pour tous les goûts et tous les

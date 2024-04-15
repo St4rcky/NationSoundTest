@@ -12,7 +12,7 @@ export default function Faq() {
 
   return (
     <>
-      <div className="bg" style={{ paddingBottom: 1 + "px" }}>
+      <div className="blockFaq" style={{ paddingBottom: 1 + "px" }}>
         <h1 className="title">Foire aux questions</h1>
         <div className="blockQuestion">
           <div>

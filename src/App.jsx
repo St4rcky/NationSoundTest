@@ -15,19 +15,21 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <Menu />
-      <Routes>
-        <Route path="/" element={<Accueil />} />
-        <Route path="/programmation" element={<Programmation />} />
-        <Route path="/informations" element={<Informations />} />
-        <Route path="/billetterie" element={<Billetterie />} />
-        <Route path="/artiste/:id" element={<Artiste />} />
-        <Route path="/mentions" element={<Mentions />} />
-        <Route path="/partenaires" element={<Partenaires />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/carte" element={<Map />} />
-      </Routes>
-      <Footer />
+      <div className="bg">
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/programmation" element={<Programmation />} />
+          <Route path="/informations" element={<Informations />} />
+          <Route path="/billetterie" element={<Billetterie />} />
+          <Route path="/artiste/:id" element={<Artiste />} />
+          <Route path="/mentions" element={<Mentions />} />
+          <Route path="/partenaires" element={<Partenaires />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/carte" element={<Map />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }

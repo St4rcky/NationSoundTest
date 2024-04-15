@@ -6,7 +6,7 @@ export default function Accessibilité() {
       <div className="blockInfo">
         <h2 className="title2">UN FESTIVAL ACCESSIBLE A TOUS</h2>
         <img src="image/accessi.jpeg" className="imgResto"></img>
-        <p>
+        <p className="infoText">
           Le festival s'engage à offrir une expérience inclusive à tous nos
           festivaliers, y compris ceux en situation de handicap.
         </p>

@@ -23,7 +23,7 @@ export default function Informations() {
 
   return (
     <>
-      <div className="bg">
+      <div className="globalInfo">
         <h1 className="title">INFORMATIONS</h1>
         <div className="sectionInfo">
           <p
