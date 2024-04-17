@@ -41,7 +41,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(1)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(1)}
               >
                 {categoriesOpen[1] ? "-" : "+"}{" "}
                 <strong>Quelles sont les horaires ?</strong>
@@ -63,7 +63,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(2)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(2)}
               >
                 {categoriesOpen[2] ? "-" : "+"}{" "}
                 <strong>Comment obtenir des billets ?</strong>
@@ -86,7 +86,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(3)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(3)}
               >
                 {categoriesOpen[3] ? "-" : "+"}{" "}
                 <strong>Les enfants sont-ils autorisés à venir ?</strong>
@@ -109,7 +109,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(4)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(4)}
               >
                 {categoriesOpen[4] ? "-" : "+"}{" "}
                 <strong>Quel dispositif pour les PMR ?</strong>
@@ -133,7 +133,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(5)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(5)}
               >
                 {categoriesOpen[5] ? "-" : "+"}{" "}
                 <strong>Peut-on sortir du festival ?</strong>
@@ -154,7 +154,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(6)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(6)}
               >
                 {categoriesOpen[6] ? "-" : "+"}{" "}
                 <strong>Peut-on se faire rembourser des billets ?</strong>
@@ -175,7 +175,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(7)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(7)}
               >
                 {categoriesOpen[7] ? "-" : "+"}{" "}
                 <strong>Peut-on apporter de la nourriture ?</strong>
@@ -197,7 +197,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(8)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(8)}
               >
                 {categoriesOpen[8] ? "-" : "+"}{" "}
                 <strong>Peut-on se restaurer sur place ?</strong>
@@ -222,7 +222,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(9)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(9)}
               >
                 {categoriesOpen[9] ? "-" : "+"}{" "}
                 <strong>Les animaux sont-ils autorisés ?</strong>
@@ -244,7 +244,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(10)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(10)}
               >
                 {categoriesOpen[10] ? "-" : "+"}{" "}
                 <strong>Ou peut-on dormir ?</strong>
@@ -269,7 +269,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(11)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(11)}
               >
                 {categoriesOpen[11] ? "-" : "+"}{" "}
                 <strong>Qui peut accéder au camping ?</strong>
@@ -291,7 +291,7 @@ export default function Faq() {
             <p>
               <span
                 className="ouvrirFermer plus"
-                onClick={() => toggleCategory(12)} // Passer l'index de la catégorie
+                onClick={() => toggleCategory(12)}
               >
                 {categoriesOpen[12] ? "-" : "+"}{" "}
                 <strong>Y a t'il des casiers sécurisés au festival ?</strong>

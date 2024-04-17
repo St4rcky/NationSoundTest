@@ -42,7 +42,7 @@ export default function Artiste() {
   }, [artiste]);
 
   if (!artiste) {
-    return <div>Loading...</div>; // Placeholder pour le chargement
+    return <div>Loading...</div>;
   }
 
   return (

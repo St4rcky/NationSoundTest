@@ -4,19 +4,20 @@ import { useEffect, useState } from "react";
 
 export default function Map() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [currentEvents, setCurrentEvents] = useState([]);
+  const [selectedFiltre, setSelectedFiltre] = useState(null);
+  // const [currentEvents, setCurrentEvents] = useState([]);
 
-  useEffect(() => {
-    const fetchCurrentEvents = async () => {
-      const response = await fetch(
-        "http://localhost/drupalNationSound/jsonapi/node/artiste"
-      );
-      const data = await response.json();
-      setCurrentEvents(data.data);
-    };
+  // useEffect(() => {
+  //   const fetchCurrentEvents = async () => {
+  //     const response = await fetch(
+  //       "http://localhost/drupalNationSound/jsonapi/node/artiste"
+  //     );
+  //     const data = await response.json();
+  //     setCurrentEvents(data.data);
+  //   };
 
-    fetchCurrentEvents();
-  }, []);
+  //   fetchCurrentEvents();
+  // }, []);
 
   const barIcon = L.icon({
     iconUrl: "/image/barIcon.png",
@@ -150,35 +151,61 @@ export default function Map() {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+    setSelectedFiltre(category);
   };
 
   return (
     <>
       <div className="blockMap">
-        <p>FILTRE</p>
         <div className="filtreMap">
-          <p className="boutonMap" onClick={() => handleCategoryChange(null)}>
-            Réinitialiser
-          </p>
           <button
-            className="boutonMap"
+            className={`boutonMap ${
+              selectedFiltre === "scene" ? "filtreActif" : ""
+            }`}
             onClick={() => handleCategoryChange("scene")}
           >
-            <img className="iconMap" src="image/sceneIcon.png" alt="scene" />
             Scènes
           </button>
-          <button onClick={() => handleCategoryChange("resto")}>
+          <button
+            className={`boutonMap ${
+              selectedFiltre === "resto" ? "filtreActif" : ""
+            }`}
+            onClick={() => handleCategoryChange("resto")}
+          >
             Restaurants
           </button>
-          <button onClick={() => handleCategoryChange("bar")}>Bar</button>
-          <button onClick={() => handleCategoryChange("toilettes")}>
+          <button
+            className={`boutonMap ${
+              selectedFiltre === "bar" ? "filtreActif" : ""
+            }`}
+            onClick={() => handleCategoryChange("bar")}
+          >
+            Bar
+          </button>
+          <button
+            className={`boutonMap ${
+              selectedFiltre === "toilettes" ? "filtreActif" : ""
+            }`}
+            onClick={() => handleCategoryChange("toilettes")}
+          >
             Toilettes
           </button>
-          <button onClick={() => handleCategoryChange("camping")}>
+          <button
+            className={`boutonMap ${
+              selectedFiltre === "camping" ? "filtreActif" : ""
+            }`}
+            onClick={() => handleCategoryChange("camping")}
+          >
             Camping
           </button>
+          <button
+            className="boutonMap"
+            onClick={() => handleCategoryChange(null)}
+          >
+            Réinitialiser
+          </button>
         </div>
-        <button>En cours</button>
+        {/* <button>En cours</button>
         <select name="heure" id="selectHeure">
           <option value="" disabled>
             Heure
@@ -195,7 +222,7 @@ export default function Map() {
           <option value="2024-07-12">12</option>
           <option value="2024-07-13">13</option>
           <option value="2024-07-14">14</option>
-        </select>
+        </select> */}
 
         <MapContainer
           center={[48.8283, 2.433]}

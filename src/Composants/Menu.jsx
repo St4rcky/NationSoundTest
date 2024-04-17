@@ -61,7 +61,6 @@ export default function Menu() {
             >
               Informations
             </Link>
-            {/* <Link to="/partenaires">Patenaires</Link> */}
             <Link
               to="/faq"
               onClick={windowWidth <= 1200 ? toggleNav : null}
@@ -87,7 +86,7 @@ export default function Menu() {
             className="closeImage"
           />
         ) : (
-          // Sinon, afficher l'icône de burger
+          // Sinon, affiche l'icône de burger
           <img
             src="/image/burger-bar.png"
             alt="Menu déroulant logo"
