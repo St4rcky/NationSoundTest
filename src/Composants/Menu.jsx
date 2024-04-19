@@ -6,6 +6,7 @@ export default function Menu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    // On vérifie la taille de l'écran pour éviter !navVisible
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
