@@ -40,7 +40,7 @@ export default function Accueil() {
           const formattedDate = `${eventDate.getDate()} ${
             months[eventDate.getMonth()]
           }`;
-
+          // Evite les erreurs si le tableau est vide
           if (formattedDate in eventsByDate) {
             eventsByDate[formattedDate].push({ id: artistData.id, title });
           } else {

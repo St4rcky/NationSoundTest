@@ -7,9 +7,11 @@ import { useLocation } from "react-router-dom";
 
 export default function Informations() {
   const [selectedInfo, setSelectedInfo] = useState("Transport");
+  // On recupere l'URL
   const location = useLocation();
 
   useEffect(() => {
+    // On recupere le parametre de l'URL (?) et on maj selectedInfo
     const params = new URLSearchParams(location.search);
     const activeTab = params.get("activeTab");
     if (activeTab) {

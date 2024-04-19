@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Faq() {
   const [categoriesOpen, setCategoriesOpen] = useState(Array(2).fill(false));
 
+  //On evite la fermeture de toutes les questions en meme temps via l'index
   const toggleCategory = (index) => {
     const newCategoriesOpen = [...categoriesOpen];
     newCategoriesOpen[index] = !newCategoriesOpen[index];

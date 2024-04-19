@@ -28,6 +28,7 @@ export default function Artiste() {
 
   useEffect(() => {
     if (artiste) {
+      // On créé un objet date qu'on met au format voulu
       const date = new Date(artiste.attributes.field_heure);
       const options = {
         weekday: "long",
@@ -36,8 +37,8 @@ export default function Artiste() {
         hour: "numeric",
         minute: "numeric",
       };
-      const formattedDate = date.toLocaleDateString("fr-FR", options);
-      setFormattedDate(formattedDate);
+      const formattedDateString = date.toLocaleDateString("fr-FR", options);
+      setFormattedDate(formattedDateString);
     }
   }, [artiste]);
 
@@ -62,7 +63,7 @@ export default function Artiste() {
           {/* Renvois la 1ere lettre mis en MAJ */}
           <strong>
             {artiste.attributes.field_scene.charAt(0).toUpperCase() +
-              // Renvois le reste sans la 1ere lettre
+              // Renvois le reste sans la 1ere lettre et remplace _ par un espace
               artiste.attributes.field_scene.replace(/_/g, " ").slice(1)}
           </strong>{" "}
           le <strong>{formattedDate}</strong>

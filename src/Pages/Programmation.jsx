@@ -54,6 +54,7 @@ export default function Programmation() {
       : artists.filter((artist) => {
           const artistDate = artist.attributes.field_date;
           const artistHeure = artist.attributes.field_heure
+            // On recupere les 5 caracteres apres le T
             .split("T")[1]
             .substring(0, 5);
           const artistType = artist.attributes.field_scene.toLowerCase();
