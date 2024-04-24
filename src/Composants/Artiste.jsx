@@ -11,7 +11,7 @@ export default function Artiste() {
     const fetchArtiste = async () => {
       try {
         const response = await fetch(
-          `http://localhost/drupalNationSound/jsonapi/node/artiste/${id}`
+          `https://starcknationsound.infinityfreeapp.com/drupalNationSound/jsonapi/node/artiste/${id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -5,26 +5,21 @@ import { useEffect, useState } from "react";
 export default function Map() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedFiltre, setSelectedFiltre] = useState(null);
-  // const [currentEvents, setCurrentEvents] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchCurrentEvents = async () => {
-  //     const response = await fetch(
-  //       "http://localhost/drupalNationSound/jsonapi/node/artiste"
-  //     );
-  //     const data = await response.json();
-  //     setCurrentEvents(data.data);
-  //   };
-
-  //   fetchCurrentEvents();
-  // }, []);
 
   const barIcon = L.icon({
     iconUrl: "/image/barIcon.png",
     iconSize: [32, 32],
   });
-  const restoIcon = L.icon({
-    iconUrl: "/image/restoIcon.png",
+  const restoVegan = L.icon({
+    iconUrl: "/image/mapVegan.png",
+    iconSize: [32, 32],
+  });
+  const restoMonde = L.icon({
+    iconUrl: "/image/mapMonde.png",
+    iconSize: [32, 32],
+  });
+  const restoFastfood = L.icon({
+    iconUrl: "/image/mapFastfood.png",
     iconSize: [32, 32],
   });
   const wcIcon = L.icon({
@@ -100,7 +95,7 @@ export default function Map() {
       categorie: "resto",
       nom: "Vegan Food",
       coordonnee: [48.829163, 2.432371],
-      icon: restoIcon,
+      icon: restoVegan,
       description:
         "Plaisirs vegan sains et délicieux ! Burgers, wraps, salades et desserts au menu.",
     },
@@ -108,7 +103,7 @@ export default function Map() {
       categorie: "resto",
       nom: "Beat Food",
       coordonnee: [48.827725, 2.432928],
-      icon: restoIcon,
+      icon: restoFastfood,
       description:
         "Repas rapides et savoureux entre deux concerts ! Sandwichs, frites, pizzas et boissons.",
     },
@@ -116,7 +111,7 @@ export default function Map() {
       categorie: "resto",
       nom: "Le monde en bouche",
       coordonnee: [48.828408, 2.434463],
-      icon: restoIcon,
+      icon: restoMonde,
       description:
         "Voyage culinaire à travers le monde ! Découvrez des spécialités exotiques et variées.",
     },
@@ -205,24 +200,6 @@ export default function Map() {
             Réinitialiser
           </button>
         </div>
-        {/* <button>En cours</button>
-        <select name="heure" id="selectHeure">
-          <option value="" disabled>
-            Heure
-          </option>
-          <option value="16:00">18h</option>
-          <option value="18:00">20h</option>
-          <option value="20:00">22h</option>
-          <option value="22:00">00h</option>
-        </select>
-        <select name="date" id="selectDate">
-          <option value="" disabled>
-            Date
-          </option>
-          <option value="2024-07-12">12</option>
-          <option value="2024-07-13">13</option>
-          <option value="2024-07-14">14</option>
-        </select> */}
 
         <MapContainer
           center={[48.8283, 2.433]}

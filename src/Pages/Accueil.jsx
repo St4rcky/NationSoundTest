@@ -8,7 +8,7 @@ export default function Accueil() {
     const fetchSchedule = async () => {
       try {
         const response = await fetch(
-          "http://localhost/drupalNationSound/jsonapi/node/artiste"
+          "https://starcknationsound.infinityfreeapp.com/drupalNationSound/jsonapi/node/artiste"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

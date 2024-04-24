@@ -10,7 +10,7 @@ export default function Billetterie() {
         <div className="blocBillet">
           <img
             className="imgBillet"
-            src="/image/Billet.jpg"
+            src="/image/billet.jpg"
             alt="Image de fête"
           ></img>
           <p className="billetPrix">Billets 1 jour : 50€</p>
@@ -26,7 +26,7 @@ export default function Billetterie() {
         <div className="blocBillet">
           <img
             className="imgBillet"
-            src="/image/Billet.jpg"
+            src="/image/billet.jpg"
             alt="Image de fête"
           ></img>
           <p className="billetPrix">Billets 2 jours : 90€</p>
@@ -42,7 +42,7 @@ export default function Billetterie() {
         <div className="blocBillet">
           <img
             className="imgBillet"
-            src="/image/Billet.jpg"
+            src="/image/billet.jpg"
             alt="Image de fête"
           ></img>
           <p className="billetPrix">Billets 3 jours : 125€</p>
