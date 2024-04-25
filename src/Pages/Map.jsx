@@ -5,6 +5,20 @@ import { useEffect, useState } from "react";
 export default function Map() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedFiltre, setSelectedFiltre] = useState(null);
+  const [userLocation, setUserLocation] = useState(null);
+
+  useEffect(() => {
+    // Obtention de la géolocalisation de l'utilisateur
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        setUserLocation([latitude, longitude]);
+      },
+      (error) => {
+        console.error("Erreur de géolocalisation :", error);
+      }
+    );
+  }, []);
 
   const barIcon = L.icon({
     iconUrl: "/image/barIcon.png",
@@ -210,6 +224,12 @@ export default function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
+          {/* Affichage de la position de l'utilisateur */}
+          {userLocation && (
+            <Marker position={userLocation}>
+              <Popup>Votre position actuelle</Popup>
+            </Marker>
+          )}
           {filteredLocations.map((marker, index) => (
             <Marker key={index} position={marker.coordonnee} icon={marker.icon}>
               <Popup>

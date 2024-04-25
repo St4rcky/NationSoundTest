@@ -38,6 +38,7 @@ p {
 .artiste {
   font-size: 35px;
   font-weight: 900;
+  text-decoration: none;
 }
 .imageAccueil {
   width: 100%;
