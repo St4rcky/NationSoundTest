@@ -8,7 +8,7 @@ export default function Map() {
   const [userLocation, setUserLocation] = useState(null);
 
   useEffect(() => {
-    // Obtention de la géolocalisation de l'utilisateur
+    // Géolocalisation de l'utilisateur
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { latitude, longitude } = position.coords;
@@ -19,7 +19,10 @@ export default function Map() {
       }
     );
   }, []);
-
+  const userIcon = L.icon({
+    iconUrl: "/image/userIcon.png",
+    iconSize: [32, 32],
+  });
   const barIcon = L.icon({
     iconUrl: "/image/barIcon.png",
     iconSize: [32, 32],
@@ -226,7 +229,7 @@ export default function Map() {
           />
           {/* Affichage de la position de l'utilisateur */}
           {userLocation && (
-            <Marker position={userLocation}>
+            <Marker position={userLocation} icon={userIcon}>
               <Popup>Votre position actuelle</Popup>
             </Marker>
           )}

@@ -8,7 +8,7 @@ export default function Partenaires() {
     const fetchPartenaires = async () => {
       try {
         const response = await fetch(
-          "http://localhost/drupalNationSound/jsonapi/node/partenaires"
+          "https://starcknationsound.infinityfreeapp.com/drupalNationSound/jsonapi/node/partenaires"
         );
         if (response.ok) {
           const data = await response.json();
