@@ -20,10 +20,13 @@ export default function Footer() {
         </div>
         <p className="titreReseaux">Réseaux sociaux :</p>
         <div className="logoReseaux">
-          <a href="https://twitter.com/" target="_blank">
+          <a href="https://twitter.com/NationSoun99773" target="_blank">
             <img src="/image/twitter.png" alt="logo Twitter"></img>
           </a>
-          <a href="https://www.facebook.com/" target="_blank">
+          <a
+            href="https://www.facebook.com/profile.php?id=61559003050001"
+            target="_blank"
+          >
             <img src="/image/facebook(1).png" alt="logo Facebook"></img>
           </a>
           <a href="https://www.instagram.com/" target="_blank">

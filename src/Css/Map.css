@@ -51,6 +51,15 @@
 .filtreActif {
   background-color: #f43b47;
 }
+.boutonMapReset {
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 10px;
+  flex-grow: 1;
+  background-color: #453a94;
+  color: #c1d0f4;
+  margin: 1px;
+}
 @media screen and (min-width: 1200px) {
   .blockMap {
     max-width: 1200px;

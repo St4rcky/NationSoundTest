@@ -211,7 +211,7 @@ export default function Map() {
             Camping
           </button>
           <button
-            className="boutonMap"
+            className="boutonMapReset"
             onClick={() => handleCategoryChange(null)}
           >
             Réinitialiser
