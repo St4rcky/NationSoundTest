@@ -31,7 +31,7 @@ export default function Programmation() {
 
     fetchArtists();
   }, []);
-
+  // Filtre pour les artistes
   const handleDateClick = (date) => {
     setSelectedDate(date);
   };

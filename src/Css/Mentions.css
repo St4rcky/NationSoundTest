@@ -4,3 +4,11 @@
 .mentions {
   padding-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .mentions {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: none;
+  }
+}
